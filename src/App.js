@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
+import Landing from './Landing/Landing';
+import Library from './Library/Library';
+import Album from './Album/Album';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header>
+          <nav>
+            <Link to='/'><h1>Music Player</h1></Link>
+            <Link to='/library'>Library</Link>
+          </nav>
+        </header>
+        <main>
+          <Route exact path="/" component={Landing} />
+          <Route path="/library" component={Library} />
+          <Route path="/album/:slug" component={Album} />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
