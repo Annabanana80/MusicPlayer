@@ -1,0 +1,47 @@
+.hero-title {
+  background-image: url(https://i.imgur.com/sLMBTom.jpg?4);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  font-size: 4rem;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0.5rem;
+  line-height: 750px;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgb(58,23,63);
+  top: 0;
+  width: 100%;
+}
+
+.selling-points {
+  margin-top: 550px;
+  position: relative;
+}
+
+.point {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  width: 33%;
+  float: left;
+}
+
+.point .point-title {
+  font-size: 1.25rem;
+}
+
+.point .point-description {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+  color: rgb(233,50,117);
+  font-size: 5rem;
+}

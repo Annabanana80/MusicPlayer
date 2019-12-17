@@ -1,0 +1,146 @@
+nav {
+  background: hsla(0, 0%, 0%, 0.2);
+  padding: 1rem 2rem;
+}
+
+nav img {
+  height: 50px;
+}
+
+#album-info {
+  overflow: hidden;
+}
+
+#album-cover-art {
+  float: left;
+  margin-right: 2rem;
+  position: relative;
+  width: 250px;
+  max-width: 33%;
+}
+
+#album-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+h2.artist {
+  font-weight: 100;
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  opacity: 0.9;
+}
+
+#release-info {
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+#song-list {
+  border-collapse: collapse;
+  clear: both;
+  font-weight: 100;
+  margin-top: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+#song-number-column {
+  width: 40px;
+}
+#song-duration-column {
+  width: 80px;
+}
+
+.song-actions button {
+  font-size: 1rem;
+}
+
+tr {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 0%, 0.01);
+  transition: all 0.2s ease;
+}
+
+tr:focus {
+  outline: aliceblue;
+}
+
+tr:hover .ion-play,
+tr.playing .ion-pause,
+tr.paused .ion-play {
+  display: block;
+}
+
+tr .ion-play, 
+tr .ion-pause,
+tr:hover .song-number,
+tr.playing .ion-play, 
+tr.playing .song-number,
+tr.paused .ion-pause,
+tr.paused .song-number {
+  display: none;
+}
+
+tr:hover {
+  background: hsla(0, 0%, 0%, 0.05);
+  cursor: pointer;
+}
+
+tr.playing {
+  background: hsla(0, 0%, 0%, 0.1);
+}
+
+tr:hover .song-title {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+tr:last-child {
+  border: none;
+}
+
+td {
+  padding: 0.75rem;
+}
+
+tr button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+}
+
+tr button:focus {
+  outline: none;
+  text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
+}
+
+tr button:focus .song-number {
+  display: none;
+}
+tr button:focus .ion-play {
+  display: block;
+}
+
+tr.playing button:focus .song-number,
+tr.playing button:focus .ion-play {
+  display: none;
+}
+tr.playing button:focus .ion-pause {
+  display: block;
+}
+
+
+.song-number {
+  color: hsla(0, 0%, 100%, 0.66);
+}
+
+.song-title {
+  color: hsla(0, 0%, 100%, 0.9);
+}
+
+.song-duration {
+  color: hsla(0, 0%, 100%, 0.5);  
+  text-align: right;
+}

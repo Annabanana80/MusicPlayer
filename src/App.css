@@ -1,4 +1,114 @@
-.App {
-  text-align: center;
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-image: url(/assets/images/blurred_backgrounds/blur_bg_3.jpg);
+}
+
+body {
+    font-family: 'Roboto', monospace;
+    color: white;
+    min-height: 100%;
+}
+
+.logo{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+nav {
+    position: relative;
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+nav .logo {
+    position: relative;
+    left: 2rem;
+    cursor: pointer;
+}
+
+nav .links-container {
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: rgb(233,50,117);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+.container.narrow {
+    max-width: 56rem;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto 150px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Medium and small screens (640px) */
+@media (min-width: 40rem) {
+  html { font-size: 112%; }
+  
+  .column {
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+  
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; } 
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+  html { font-size: 120%; }
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
 
